@@ -1,38 +1,295 @@
-.App {
+/* src/App.css */
+
+/* 1. DEFINE COLOR PALETTE & GLOBAL STYLES */
+:root {
+  --primary-color: #00BFFF;    /* Electric Blue */
+  --secondary-color: #FF9F00;  /* Marigold Yellow */
+  --accent-color: #FFFFFF;     /* White */
+  --background-light: #F5F5F5; /* Light Gray */
+  --text-dark: #2d3748;         /* A dark gray for text */
+  --text-light: #718096;        /* A lighter gray for secondary text */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--accent-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
+}
+
+/* 2. SECTION STYLING */
+.section {
+  padding: 5rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-header {
-  background-color: #282c34;
+.bg-light {
+  background-color: var(--background-light);
+}
+
+/* 3. HERO SECTION */
+.hero {
+  background-color: var(--background-light);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-title {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column; /* Stacks buttons on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Make buttons side-by-side on larger screens */
+@media (min-width: 768px) {
+  .hero-buttons {
+    flex-direction: row;
   }
+}
+
+.hero-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.social-link {
+  display: block;
+  padding: 0.75rem;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. BUTTON STYLES */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px; /* pill shape */
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.btn-primary:hover {
+  background-color: #00a8e6; /* Slightly darker blue */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+/* 5. CARD STYLES (For Projects & Certifications) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column on mobile */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 2 columns on tablets */
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3 columns on desktops */
+@media (min-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background-color: var(--accent-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  flex-grow: 1; /* Makes description take up available space */
+}
+
+.card-footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-light);
+}
+
+.card-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card-link {
+  color: var(--secondary-color);
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+/* CERTIFICATION CARD VARIANT */
+.cert-card {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+/* Center two cert cards on desktop */
+@media (min-width: 1024px) {
+  .cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+  }
+}
+
+.cert-icon {
+  flex-shrink: 0;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+/* 6. FOOTER */
+.footer {
+  background-color: var(--text-dark);
+  color: #a0aec0;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.footer-name span {
+    color: var(--secondary-color);
+}
+
+.footer .copyright {
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #4a5568;
 }
