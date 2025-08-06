@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Your main stylesheet
+import './App.css';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
@@ -19,9 +19,9 @@ function App() {
 
 // A simple, styled footer component
 const Footer = () => {
-  // --- EDIT YOUR NAME HERE ---
-  const name = "Your Name";
-  // --------------------------
+  
+  const name = "Aditya Ajay";
+ 
 
   return (
     <footer className="footer">

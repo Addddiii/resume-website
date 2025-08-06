@@ -6,9 +6,9 @@ const Projects = () => {
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
   
-  // --- EDIT YOUR GITHUB USERNAME ---
-  const githubUsername = "your-github-username";
-  // ---------------------------------
+  
+  const githubUsername = "Addddiii";
+ 
 
   useEffect(() => {
     const fetchRepos = async () => {
