@@ -13,6 +13,11 @@ const certificationsData = [
     issuer: "LinkedIn Learning",
     url: "https://www.linkedin.com/learning/certificates/your-unique-id"
   },
+  {
+    title: "Discrete Math",
+    issuer: "LinkedIn Learning",
+    url: "https://www.linkedin.com/learning/certificates/86c9bb183a830855ffb0078c003407cf9e30f0bc4569524e842a1ba6621d92d8?trk=share_certificate"
+  },
   // You can add more here, up to 4 looks best
 ];
 // -----------------------------------
