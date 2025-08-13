@@ -5,17 +5,32 @@ const Hero = () => {
   // --- EDIT YOUR INFO HERE ---
   const personalInfo = {
     name: "Aditya Ajay",
-    tagline: "A passionate developer!",
-    githubUser: "Addddiii", // Your GitHub username
-    linkedinUser: "www.linkedin.com/in/aditya-ajay-33228031b", // The part of your LinkedIn URL after "linkedin.com/in/"
+    tagline: "possibly your next best developer.",
+    profileImage: "/pfp.jpg",
+    githubUser: "Addddiii", 
+    linkedinUser: "www.linkedin.com/in/aditya-ajay-33228031b", 
     email: "Aditiyaajay0106@gmail.com",
-    resumeUrl: "/ADITYA AJAY(pro).pdf" // Place your resume PDF in the 'public' folder
+    resumeUrl: "/ADITYA AJAY(pro).pdf" 
   };
   // --------------------------
 
   return (
     <div className="hero">
       <div className="container">
+        <div className="profile-image-container">
+          <img 
+            src={personalInfo.profileImage} 
+            alt={`${personalInfo.name} `}
+            className="profile-image"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              e.target.nextSibling.style.display = 'flex';
+            }}
+          />
+          <div className="profile-fallback" style={{display: 'none'}}>
+            {personalInfo.name.split(' ').map(n => n[0]).join('')}
+          </div>
+        </div>
         <h1 className="hero-title">{personalInfo.name}</h1>
         <p className="hero-tagline">{personalInfo.tagline}</p>
         <div className="hero-buttons">

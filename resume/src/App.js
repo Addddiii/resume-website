@@ -3,12 +3,15 @@ import './App.css';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
+import Skills from './components/skills';
 
 function App() {
   return (
     <div>
       <Hero />
       <main>
+        <iframe src="https://Addddiii.github.io/moviebot" width="400" height="500"></iframe>
+        <Skills/>
         <Projects />
         <Certifications />
       </main>
