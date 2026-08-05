@@ -12,21 +12,6 @@ function App() {
       <main>
         <Skills />
         <Projects />
-
-        {/* Live demo embed */}
-        <section className="embed-section">
-          <h2 className="section-title">Try it live</h2>
-          <p className="section-subtitle">A quick look at one of the projects, running right here.</p>
-          <div className="embed-frame">
-            <iframe
-              src="https://Addddiii.github.io/moviebot"
-              width="400"
-              height="500"
-              title="MovieBot live demo"
-            />
-          </div>
-        </section>
-
         <Certifications />
       </main>
       <Footer />
