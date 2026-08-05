@@ -2,15 +2,17 @@ import React from 'react';
 import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
-  // --- EDIT YOUR INFO HERE ---
+  
   const personalInfo = {
     name: "Aditya Ajay",
     tagline: "Driven by curiosity, defined by execution.",
-    profileImage: "process.env.PUBLIC_URL + '/profile.png'",
+    // Removed the curly braces here
+    profileImage: process.env.PUBLIC_URL + '/profile.png',
     githubUser: "Addddiii", 
     linkedinUser: "www.linkedin.com/in/aditya-ajay-33228031b", 
     email: "Aditiyaajay0106@gmail.com",
-    resumeUrl: "/ADITYA AJAY(pro).pdf" 
+    // Added process.env.PUBLIC_URL here so the download works on GitHub Pages
+    resumeUrl: process.env.PUBLIC_URL + "/ADITYA AJAY(pro).pdf" 
   };
   // --------------------------
 
