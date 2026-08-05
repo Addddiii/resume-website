@@ -5,8 +5,8 @@ const Hero = () => {
   // --- EDIT YOUR INFO HERE ---
   const personalInfo = {
     name: "Aditya Ajay",
-    tagline: "possibly your next best developer.",
-    profileImage: "/pfp.jpg",
+    tagline: "Driven by curiosity, defined by execution.",
+    profileImage: "process.env.PUBLIC_URL + '/profile.png'",
     githubUser: "Addddiii", 
     linkedinUser: "www.linkedin.com/in/aditya-ajay-33228031b", 
     email: "Aditiyaajay0106@gmail.com",
