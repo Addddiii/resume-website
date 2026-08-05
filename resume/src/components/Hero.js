@@ -7,7 +7,7 @@ const Hero = () => {
     name: "Aditya Ajay",
     tagline: "Driven by curiosity, defined by execution.",
     // Removed the curly braces here
-    profileImage: process.env.PUBLIC_URL + '/profile.png',
+    profileImage: process.env.PUBLIC_URL + '/pfp.jpg',
     githubUser: "Addddiii", 
     linkedinUser: "www.linkedin.com/in/aditya-ajay-33228031b", 
     email: "Aditiyaajay0106@gmail.com",
